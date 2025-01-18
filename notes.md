@@ -5,3 +5,4 @@
 ## Zookeeper
 
 - Since Kafka takes in input from different data sources and then gives to different consumers, its important to have a system that can synchronize the operation. Zookeeper is basicallt a resource manager.
+- Also we need to spin up an amazon instance.
