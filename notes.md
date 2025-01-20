@@ -37,8 +37,6 @@ The instances that we have are not big enough to continouly stream data. WE need
 
 - Go to command_kafka.txt and follow the steps.
 
-public ip  :  3.15.6.210
-ssh -i "kafka-aws-ssd-type.pem" ec2-user@ec2-3-15-6-210.us-east-2.compute.amazonaws.com
 
 
 ## Setting up Amazon s3 :
@@ -47,3 +45,10 @@ ssh -i "kafka-aws-ssd-type.pem" ec2-user@ec2-3-15-6-210.us-east-2.compute.amazon
 - download amazon cli toosl using `brew install awscli`
 - get the secret ID and key from s3 and configure it in AWS CLI using `aws configure`
 - now python noteboook for consumer and producer.
+- now go to amazon glue to create a crawlier and run the crawler on the s3 bucket.
+- This will create a table for the data source, with rows for each json file that were added to s3 using the kafka consumer. 
+- We might need to create a new IAM role, with administrative acess for the Glue service
+- Now go to Athena to run sQL quries on the table that was created by the crawler.
+- We might have to select a target locatin for the query to save results.
+- And thats it. 
+
