@@ -37,4 +37,13 @@ The instances that we have are not big enough to continouly stream data. WE need
 
 - Go to command_kafka.txt and follow the steps.
 
+public ip  :  3.15.6.210
+ssh -i "kafka-aws-ssd-type.pem" ec2-user@ec2-3-15-6-210.us-east-2.compute.amazonaws.com
 
+
+## Setting up Amazon s3 :
+- create an s3 bucket
+- create a user under IAM service, and give them adimistrativeACces policy and create a key and ID.
+- download amazon cli toosl using `brew install awscli`
+- get the secret ID and key from s3 and configure it in AWS CLI using `aws configure`
+- now python noteboook for consumer and producer.
