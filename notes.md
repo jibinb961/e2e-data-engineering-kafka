@@ -33,4 +33,8 @@ which will startup a new server on port 8080 in your default web brwoser.
 
 The instances that we have are not big enough to continouly stream data. WE need more computing power. 
 
+## To setup the services:
+
+- Go to command_kafka.txt and follow the steps.
+
 
